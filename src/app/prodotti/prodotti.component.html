@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 inizio">
+      Solo per te tutti i nostri prodotti
+    </div>
+  </div>
+  <hr>
+    <div class="col-md-5">
+      <div *ngFor="let p of prodotti ; let i= index"
+          >
+        <div class="col-xs-12">
+        <a (click)="foto()" style="cursor:pointer;"
+        [routerLink]="[i]"
+        routerLinkActive="active"
+        class="list-group-item clearfix">
+        <div class="pull-left">
+          <h4 class="list-group-item-heading">{{p.nomeProdotti}}</h4>
+          <p class="list-group-item-text" #id hidden>{{p.idProdotti}}</p>
+          <p class="list-group-item-text">{{p.descrizione}}</p>
+        </div>
+        <span class="pull-right">
+          <img src="{{p.immagine}}"
+          alt="{{p.nomeProdotti}}" class="img-responsive" style="max-height:70px;" />
+           </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <button (click)="sessione()">sessione</button>
+    <div class="container col-md-7">
+      <router-outlet></router-outlet>
+    </div>
+</div>

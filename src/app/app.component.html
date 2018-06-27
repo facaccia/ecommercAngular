@@ -1,0 +1,20 @@
+<ng-template #benvenuto>
+    <app-header ></app-header>
+</ng-template>
+
+    <div class="container" *ngIf="router.url === '/'; else benvenuto">
+        <div class="row">
+            <div class="col xs 12">
+                    <img src="https://www.cuttingstickers.com/702-large_default/the-avengers-film-marvel-comics-superhero-logo-adesivi-taglio.jpg"
+                    class="img-responsive" style="max-height: 150px; max-width: 150px;" alt="">
+                <p class="benvenuto">
+                    Benvenuto In My Amazon; effettua l'accesso per visualizzare tutti i nostri prodotti 
+                </p>
+            </div>
+        </div>
+    </div>
+
+<router-outlet></router-outlet>
+
+
+

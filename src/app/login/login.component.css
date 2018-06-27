@@ -1,0 +1,19 @@
+.log{
+text-align: center;
+font-size: 35px;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched{
+    border:  1px solid red;
+    }
+
+form{
+    margin: 20px auto;
+    width: 300px;
+}
+body{background-color: black;}
+.errore{color: red ;
+    margin-top: 10px;
+    font-size: 20px;
+     border-color: 1px solid red;}

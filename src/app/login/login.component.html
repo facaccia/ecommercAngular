@@ -1,0 +1,51 @@
+    <div *ngIf="!accesso; else prova" class="container">
+        
+        <div class="row">
+            <div class="col-xs-12">
+                <form (ngSubmit)="login()"  #form="ngForm">
+                    <div class="row">
+                    <div class="col-xs-8">
+                        <label for="username">Username</label>
+                        <input type="text"
+                        class="form-control"
+                        id="username"
+                        name="username" 
+                        ngModel
+                        required>
+                    </div>
+                </div>
+            <div class="row">
+                <div class="col-xs-8">
+                    <label for="password">Password</label>
+                    <input type="password" 
+                    class="form-control"
+                    id="password"
+                    name="password" 
+                    ngModel
+                    required>
+                </div>
+            </div>
+            <p *ngIf="!form.valid && form.touched" style="color: red">Inserire Username & Password</p>
+            <hr>
+            <div class="row">
+                <div class="col-xs-4">
+                    <button type="submit"
+                    class="btn btn-primary"
+                    >Accedi</button>
+                </div>
+            </div>
+            <p *ngIf="form.valid" class="errore" id="errore"></p>
+            
+        </form>
+    </div>
+</div>
+</div>
+
+<ng-template #prova>
+    <div class="container well" >
+        <div class="row log">
+            Ciao {{user.username}}, ti stavamo aspettando!
+        </div>
+    </div>
+    <button class="btn btn-success" (click)="prodotti()">Prodotti</button>
+</ng-template>

@@ -1,0 +1,11 @@
+.bc{
+    border-color:steelblue;
+    border: solid 1px;
+}
+
+.inizio{
+    color:navy;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+}
